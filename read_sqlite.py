@@ -26,7 +26,7 @@ class SQLiteReader:
         
         print("Данные успешно извлечены и сохранены в games.json.")
 
-if __name__ == "__main__":
-    db_path = "games.db"
-    reader = SQLiteReader(db_path)
-    reader.extract_data_to_json()
+# if __name__ == "__main__":
+#     db_path = "games.db"
+#     reader = SQLiteReader(db_path)
+#     reader.extract_data_to_json()
