@@ -133,7 +133,7 @@ class PostgreSQLLoader:
         except Exception as e:
             print(f"Ошибка: {e}")
             connection.rollback()
-
+        
 
 # if __name__ == "__main__":
 #     db_config = {

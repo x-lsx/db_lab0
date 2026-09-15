@@ -13,7 +13,8 @@ class SQLiteReader:
         
         connection = sqlite3.connect(self.db_path)
         connection.row_factory = sqlite3.Row
-        cursor = connection.cursor()
+        
+        cursor = connection.cursor()    
         
         print("Чтение данных из базы данных.")
         cursor.execute("SELECT * FROM games_1nf")
@@ -25,8 +26,3 @@ class SQLiteReader:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
         
         print("Данные успешно извлечены и сохранены в games.json.")
-
-# if __name__ == "__main__":
-#     db_path = "games.db"
-#     reader = SQLiteReader(db_path)
-#     reader.extract_data_to_json()
